@@ -293,9 +293,6 @@ class AlphaBetaPlayer(IsolationPlayer):
         try:
             while True:
                 best_move = self.alphabeta(game, depth)
-                if self.time_left() < 0:
-                    return best_move
-
                 depth += 1
         except SearchTimeout:
             pass
